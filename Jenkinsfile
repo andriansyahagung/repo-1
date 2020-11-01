@@ -12,7 +12,7 @@ pipeline {
       stage('Preparation') {
          steps {
             cleanWs()
-            git credentialsId: 'github-repo', url: "https://github.com/andriansyahagung/my-first-pipeline.git"
+            git credentialsId: 'github-repo', url: "https://github.com/andriansyahagung/repo-1.git"
          }
       }
       stage('Build') {
