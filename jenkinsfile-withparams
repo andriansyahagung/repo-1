@@ -24,7 +24,7 @@ pipeline {
 
       stage('Deploy to Cluster') {
           steps {
-            sh 'Deploy to Cluster'
+            sh 'echo Deploy to Cluster'
           }
       }
    }
