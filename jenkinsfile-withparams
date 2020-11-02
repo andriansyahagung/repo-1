@@ -11,6 +11,11 @@ pipeline {
          }
       }
       stage('Build') {
+         when {
+             expression {
+                 params.executeTest
+             } 
+         }
          steps {
             sh 'echo Build'
          }
@@ -25,6 +30,7 @@ pipeline {
       stage('Deploy to Cluster') {
           steps {
             sh 'echo Deploy to Cluster'
+            sh 'echo deploying version ${VERSION}'
           }
       }
    }
